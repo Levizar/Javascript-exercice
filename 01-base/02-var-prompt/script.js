@@ -12,3 +12,7 @@
 (() => {
     // your code here
 })();
+
+let a = prompt("Quel est votre âge?");
+
+alert("Votre âge est de " + a + "ans");
