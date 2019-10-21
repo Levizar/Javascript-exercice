@@ -11,4 +11,7 @@
 
 (() => {
     // your code here
+    let asking = () => {
+        
+    }
 })();

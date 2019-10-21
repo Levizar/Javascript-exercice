@@ -11,17 +11,15 @@
 
 (() => {
     // your code here
+    const gateau = () => {
+        let question = prompt("Voulez-vous du gateau ?");
+        if (question.toUpperCase() == "OUI"){
+            alert("C'est bien !");
+        }
+        else{
+            alert("Du gateau, ça ne se refuse pas!");
+            gateau();
+        }
+    }
+    gateau();
 })();
-
-function gateau(){
-    let question = prompt("Voulez-vous du gateau ?");
-    if (question.toUpperCase() == "OUI"){
-        alert("C'est bien !");
-    }
-    else{
-        alert("Du gateau, ça ne se refuse pas!");
-        gateau();
-    }
-}
-
-gateau();

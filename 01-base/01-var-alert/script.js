@@ -11,8 +11,7 @@
 
 (() => {
     // your code here
-})();
-
-let a = "Hello World !";
-
-alert(a);
+    let a = "Hello World !";
+    alert(a);
+})
+();
