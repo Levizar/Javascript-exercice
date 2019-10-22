@@ -14,5 +14,8 @@
 
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+        const factorialize = (num) => (num == 0 || num == 1) ? 1 : num = num * factorialize(num-1);
+        let number = document.getElementById("number").value;
+        alert(factorialize(number));
     });
 })();
