@@ -12,5 +12,10 @@
 (() => {
     document.getElementById("run").addEventListener("click", () => {
         // your code here
+        let arr_square = []; 
+        for(let i=0;i<=21;i=i+2){
+            arr_square.push(i*i);
+        }
+        alert(arr_square);
     });
 })();
