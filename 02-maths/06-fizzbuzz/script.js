@@ -10,7 +10,20 @@
 // You will have time to focus on it later.
 
 (()=> {
-
-    // your code here
-
+    let fizzbuzz = "";
+    for(i=1;i<=100;i++){
+        if(i%3==0 && i%5==0){
+            fizzbuzz = "fizzbuzz";
+        }
+        else if(i%3==0){
+            fizzbuzz = "fizz";
+        }
+        else if(i%5==0){
+            fizzbuzz = "buzz";
+        }
+        else{
+            fizzbuzz = i;
+        }
+        console.log(fizzbuzz);
+    }
 })();
