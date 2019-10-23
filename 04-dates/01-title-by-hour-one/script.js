@@ -12,4 +12,18 @@
 (() => {
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
+    
+    const bonjour_bonsoir = () => {
+        let time = new Date().getHours();
+        let it_be = "";
+        if(time<18 && time>3){
+            it_be = "Bonjour";
+        }
+        else{
+            it_be = "Bonsoir";
+        }
+
+        document.getElementById("accueil").innerHTML = it_be;        
+    }
+    bonjour_bonsoir();
 })();
