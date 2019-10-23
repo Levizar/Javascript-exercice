@@ -12,4 +12,25 @@
 (() => {
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
+    const ajd = () => {
+        let date = new Date;
+        let w_day = date.getDay() -1;
+        week = ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"];
+        w_day = week[w_day];
+        let day = date.getDate();
+        let month = date.getMonth()-1;
+        ymonth = ["janvier","février","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","décembre"];
+        month = ymonth[month];
+        let year = date.getFullYear();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        p = `${w_day} ${day} ${month} ${year}, ${hours}h${minutes}`;
+
+        document.getElementById("date").innerHTML = p;
+
+        console.log(day);
+
+
+    }
+    ajd();
 })();
