@@ -11,4 +11,11 @@
 
 (() => {
     // your code here
+    const bgchange = () => {
+        let color = document.getElementById("color").value;
+        document.body.style.backgroundColor = color;
+    }
+    
+    document.getElementById("run").addEventListener("click", bgchange);
+
 })();
