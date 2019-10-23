@@ -25,12 +25,7 @@
         let hours = date.getHours();
         let minutes = date.getMinutes();
         p = `${w_day} ${day} ${month} ${year}, ${hours}h${minutes}`;
-
         document.getElementById("date").innerHTML = p;
-
-        console.log(day);
-
-
     }
     ajd();
 })();
