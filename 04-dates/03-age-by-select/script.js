@@ -10,5 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const age = () => {
+        let td_date = new Date();
+        let td_year = td_date.getFullYear();
+        let td_month = td_date.getMonth();
+        let td_day = td_date.getDay();
+        let bd_year = document.getElementById("dob-year").value;
+        let bd_month = document.getElementById("dob-month").value - 1;
+        let bd_day = document.getElementById("dob-day").value;
+
+        let age = td_year - bd_year;
+        if( (td_month < bd_month) || ((td_month == bd_month) && (td_day < bd_day)) ){
+            age = age - 1;
+        }
+    alert(`Vous avez ${age} ans`)        
+    }
+    document.getElementById("run").addEventListener("click", age);
 })();
