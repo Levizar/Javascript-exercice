@@ -17,6 +17,7 @@
         let numbers = document.getElementById("numbers").value;
         numbers = numbers.split(",");
         numbers = numbers.sort( (a,b)=> a-b );
+        numbers = numbers.join(", ");
         alert(numbers);
     });
 })();

@@ -17,11 +17,15 @@
             'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 
             'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
         ];
-        let message_to_display = "";
-        for(let i=1;i<=12;i++){
+        let message_to_display;
+        for(let i=0;i<=11;i++){
             date = new Date(year,i,13);
             if((date.getDay())==5){
-                message_to_display = `${message_to_display}\n Vendredi 13 ${arr_month[i+1]} ${year}`
+                if(message_to_display == undefined){
+                    message_to_display = `Vendredi 13 ${arr_month[i]} ${year}`    
+                }
+                else{message_to_display = `${message_to_display}\nVendredi 13 ${arr_month[i]} ${year}`
+                }
             }
         }
         alert(message_to_display);
