@@ -10,5 +10,21 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const vendredi_13 = () => {
+        let year = document.getElementById("year").value;
+        let date;
+        let arr_month = [
+            'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 
+            'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
+        ]
+        let message_to_display = ""
+        for(let i=1;i<=12;i++){
+            date = new Date(year,i,13);
+            if((date.getDay())==5){
+                message_to_display = `${message_to_display}\n Vendredi 13 ${arr_month[i+1]}`
+            }
+        }
+        alert(message_to_display);
+    }
+    document.getElementById("run").addEventListener("click", vendredi_13);
 })();
