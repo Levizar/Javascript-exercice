@@ -24,6 +24,7 @@
         let year = date.getFullYear();
         let hours = date.getHours();
         let minutes = date.getMinutes();
+        minutes < 10 ? minutes = "0" + minutes : 0;
         p = `${w_day} ${day} ${month} ${year}, ${hours}h${minutes}`;
         document.getElementById("date").innerHTML = p;
     }
