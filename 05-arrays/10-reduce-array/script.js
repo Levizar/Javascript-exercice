@@ -88,5 +88,19 @@
         },
     ];
 
+    const total_age = () => {
+        arr_age = people.map(x => x.age);
+        message = arr_age.reduce(a,b => a+b);
+        console.log(message)
+    }
+
+    // ou
+
+    const age_objet = () => {
+        return console.log(people.reduce((a, b) =>({age: a.age + b.age }))
+    }
+
+    document.getElementById("run").addEventListener("click", age_objet)
+
     // your code here
 })();
