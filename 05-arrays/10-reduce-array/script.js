@@ -88,19 +88,39 @@
         },
     ];
 
+    /* 
+    Renvoie l'age sous forme d'un nombre en créant une array contenant les ages et
+    en réduisant l'array à la somme de ses valeurs 
+    */
+
     const total_age = () => {
-        arr_age = people.map(x => x.age);
-        message = arr_age.reduce(a,b => a+b);
-        console.log(message)
+        console.log(people.map(x => x.age).reduce((acc, elm) => acc+elm));
     }
 
-    // ou
+    /*
+    Renvoie l'age sous forme d'un nombre en réduisant l'array sur base de la valeur de
+    la propriété age de chaque évélement.
+    */
 
-    const age_objet = () => {
-        return console.log(people.reduce((a, b) =>({age: a.age + b.age }))
+    const age_no_more_array = () => {
+        return console.log(people.reduce((acc, elm) => acc + elm.age,0));
     }
 
-    document.getElementById("run").addEventListener("click", age_objet)
+    /* 
+    Renvoie un objet contenant uniquement la propriété age et dont la valeur est obtenue en
+    réduisant l'array sur base de la valeur de la propriété age de chaque élément.
+    Pour obtenir un objet, il faut demander à la fonction callback de renvoyer un objet et
+    l'accumulateur doit être une propriété.
+    */
+
+    const age_object = () => {
+        return console.log(people.reduce((acc, elm) => ({age: acc.age + elm.age})));
+    }
+
+    document.getElementById("run").addEventListener("click", total_age);
+    document.getElementById("run").addEventListener("click", age_no_more_array);
+    document.getElementById("run").addEventListener("click", age_object);
+
 
     // your code here
 })();
