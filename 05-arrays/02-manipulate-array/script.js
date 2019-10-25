@@ -23,5 +23,12 @@
         "cerise",
     ];
 
-    // your code here
+    const modify = () => {
+        fruits.shift();
+        fruits.unshift("bannane");
+        fruits.pop();
+        fruits.push("kiwi");
+        console.log(fruits);
+    }
+    document.getElementById("run").addEventListener("click", modify);
 })();
