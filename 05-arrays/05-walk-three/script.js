@@ -38,5 +38,8 @@
         },
     ];
 
+    const display_firstname = () => people.forEach(elmt => console.log(elmt.firstname));
+    document.getElementById("run").addEventListener("click", display_firstname);
+
     // your code here
 })();
