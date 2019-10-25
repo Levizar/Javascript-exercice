@@ -25,5 +25,13 @@
         "cerise",
     ];
 
+    const display_fruits = () => {
+        for(let i=0;i<fruits.length;i++){
+            console.log(fruits[i]);
+        }
+    }
+
+    document.getElementById("run").addEventListener("click", display_fruits);
+
     // your code here
 })();
