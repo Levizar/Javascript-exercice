@@ -89,9 +89,14 @@
     ];
 
 
-    const display_email_dupont = () => people.forEach(
-        elmt => (elmt.lastname == "Dupont" && elmt.firstname) ? console.log(elmt.email) : 0        
-        );
+    // const display_email_dupont = () => people.forEach(
+    //     elmt => (elmt.lastname == "Dupont" && elmt.firstname) ? console.log(elmt.email) : 0        
+    //     );
+
+    const display_email_dupont = () => people.find(
+        elmt =>(elmt.lastname == "Dupont" && elmt.firstname) ? console.log(elmt.email) : 0
+        )
+
     document.getElementById("run").addEventListener("click", display_email_dupont);
 
 

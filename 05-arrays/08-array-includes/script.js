@@ -25,5 +25,8 @@
         "cerise",
     ];
 
+    const isThereApple = () => fruits.includes("pomme")  ? console.log("oui") : 0
+    document.getElementById("run").addEventListener("click", isThereApple);
+
     // your code here
 })();
