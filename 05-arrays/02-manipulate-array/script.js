@@ -23,12 +23,12 @@
         "cerise",
     ];
 
-    const modify = () => {
+    const arrModifier = () => {
         fruits.shift();
         fruits.unshift("bannane");
         fruits.pop();
         fruits.push("kiwi");
         console.log(fruits);
     }
-    document.getElementById("run").addEventListener("click", modify);
+    document.getElementById("run").addEventListener("click", arrModifier);
 })();

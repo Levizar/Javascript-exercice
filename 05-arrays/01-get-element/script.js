@@ -25,8 +25,8 @@
         "cerise",
     ];
 
-    const run = () => alert(fruits[2]);
-    document.getElementById("run").addEventListener("click", run);
+    const fruit2giver = () => alert(fruits[2]);
+    document.getElementById("run").addEventListener("click", fruit2giver);
 
     // your code here
 })();

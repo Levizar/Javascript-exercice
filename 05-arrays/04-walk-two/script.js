@@ -25,8 +25,8 @@
         "cerise",
     ];
 
-    const display_fruits = () => fruits.forEach(elmt => console.log(elmt));
-    document.getElementById("run").addEventListener("click", display_fruits);
+    const fruitsDisplayer = () => fruits.forEach(elmt => console.log(elmt));
+    document.getElementById("run").addEventListener("click", fruitsDisplayer);
 
     // your code here
 })();

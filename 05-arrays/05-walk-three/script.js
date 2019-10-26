@@ -38,8 +38,8 @@
         },
     ];
 
-    const display_firstname = () => people.forEach(elmt => console.log(elmt.firstname));
-    document.getElementById("run").addEventListener("click", display_firstname);
+    const firstnameDisplayer = () => people.forEach(element => console.log(element.firstname));
+    document.getElementById("run").addEventListener("click", firstnameDisplayer);
 
     // your code here
 })();

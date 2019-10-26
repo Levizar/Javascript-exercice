@@ -93,11 +93,11 @@
     //     elmt => (elmt.lastname == "Dupont" && elmt.firstname) ? console.log(elmt.email) : 0        
     //     );
 
-    const display_email_dupont = () => people.find(
-        elmt =>(elmt.lastname == "Dupont" && elmt.firstname) ? console.log(elmt.email) : 0
+    const displayDupontEmail = () => people.find(
+        element =>(element.lastname == "Dupont" && element.firstname) ? console.log(element.email) : 0
         )
 
-    document.getElementById("run").addEventListener("click", display_email_dupont);
+    document.getElementById("run").addEventListener("click", displayDupontEmail);
 
 
     // your code here

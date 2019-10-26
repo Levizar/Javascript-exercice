@@ -25,13 +25,13 @@
         "cerise",
     ];
 
-    const display_fruits = () => {
+    const fruitsDisplayer = () => {
         for(let i=0;i<fruits.length;i++){
             console.log(fruits[i]);
         }
     }
 
-    document.getElementById("run").addEventListener("click", display_fruits);
+    document.getElementById("run").addEventListener("click", fruitsDisplayer);
 
     // your code here
 })();

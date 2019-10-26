@@ -11,16 +11,16 @@
 
 (() => {
     // your code here
-    const stat = () => {
-        let arr_random = [];
+    const statOverRandomNumberOperator = () => {
+        let arrRandomNumbers = [];
         for(let i=1;i<=10;i++){
-            arr_random[i-1] = Math.floor(Math.random() * 101);
-            document.getElementById(`n-${i}`).innerHTML = arr_random[i-1];
+            arrRandomNumbers[i-1] = Math.floor(Math.random() * 101);
+            document.getElementById(`n-${i}`).innerHTML = arrRandomNumbers[i-1];
         }
-        let min = Math.min(...arr_random);
-        let max = Math.max(...arr_random);
-        let sum = arr_random.reduce((a,b) => a + b);
-        let average = sum / arr_random.length;
+        let min = Math.min(...arrRandomNumbers);
+        let max = Math.max(...arrRandomNumbers);
+        let sum = arrRandomNumbers.reduce((acc,rest) => acc + rest);
+        let average = sum / arrRandomNumbers.length;
         
         document.getElementById(`min`).innerHTML = min;
         document.getElementById("max").innerHTML = max;
@@ -28,7 +28,7 @@
         document.getElementById('average').innerHTML = average;
     }
 
-    document.getElementById("run").addEventListener("click", stat);
+    document.getElementById("run").addEventListener("click", statOverRandomNumberOperator);
 
 
 })();

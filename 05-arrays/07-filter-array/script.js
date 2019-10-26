@@ -88,11 +88,11 @@
         },
     ];
 
-    const display_older = () => {
+    const displayOnlyMajor = () => {
         older_people = people.filter(elmt => elmt.age > 18);
         console.log(older_people);
     }
 
-    document.getElementById("run").addEventListener("click", display_older);
+    document.getElementById("run").addEventListener("click", displayOnlyMajor);
 
 })();

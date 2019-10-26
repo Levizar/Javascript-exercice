@@ -93,8 +93,8 @@
     en réduisant l'array à la somme de ses valeurs 
     */
 
-    const total_age = () => {
-        console.log(people.map(x => x.age).reduce((acc, elm) => acc+elm));
+    const ageTotal = () => {
+        console.log(people.map(element => element.age).reduce((acc, element) => acc+element));
     }
 
     /*
@@ -102,8 +102,8 @@
     la propriété age de chaque évélement.
     */
 
-    const age_no_more_array = () => {
-        return console.log(people.reduce((acc, elm) => acc + elm.age,0));
+    const ageWithoutArray = () => {
+        return console.log(people.reduce((acc, element) => acc + element.age,0));
     }
 
     /* 
@@ -113,13 +113,13 @@
     l'accumulateur doit être une propriété.
     */
 
-    const age_object = () => {
-        return console.log(people.reduce((acc, elm) => ({age: acc.age + elm.age})));
+    const ageObject = () => {
+        return console.log(people.reduce((acc, element) => ({age: acc.age + element.age})));
     }
 
-    document.getElementById("run").addEventListener("click", total_age);
-    document.getElementById("run").addEventListener("click", age_no_more_array);
-    document.getElementById("run").addEventListener("click", age_object);
+    document.getElementById("run").addEventListener("click", ageTotal);
+    document.getElementById("run").addEventListener("click", ageWithoutArray);
+    document.getElementById("run").addEventListener("click", ageObject);
 
 
     // your code here

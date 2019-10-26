@@ -36,8 +36,8 @@
     */
 
     const dedouble = () => {
-        let fruits_unique = [...new Set(fruits)];
-        console.log(fruits_unique);
+        let arrFruitsUnique = [...new Set(fruits)];
+        console.log(arrFruitsUnique);
     }
 
     document.getElementById("run").addEventListener("click", dedouble);
