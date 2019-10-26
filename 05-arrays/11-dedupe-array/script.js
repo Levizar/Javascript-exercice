@@ -27,5 +27,20 @@
         "cerise",
     ];
 
+    /*
+    Exercice :
+        new Set crée un objet qui est une sorte d'array n'acceptant que des valeurs uniques.
+        En déroulant l'objet set dans une array, 
+        l'on déroule les valeurs du set dans une nouvelle array.
+        Cela revient à transformer le set en array.
+    */
+
+    const dedouble = () => {
+        let fruits_unique = [...new Set(fruits)];
+        console.log(fruits_unique);
+    }
+
+    document.getElementById("run").addEventListener("click", dedouble);
+
     // your code here
 })();
