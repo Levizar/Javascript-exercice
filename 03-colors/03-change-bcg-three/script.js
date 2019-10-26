@@ -11,12 +11,12 @@
 
 (() => {
     // your code here
-    const bgchange = () => {
-        let rdm_a = Math.floor(Math.random() * 256);
-        let rdm_b = Math.floor(Math.random() * 256);
-        let rdm_c = Math.floor(Math.random() * 256);
-        let rgb = `rgb(${rdm_a},${rdm_c},${rdm_c})`;
-        document.body.style.backgroundColor = rgb;
+    const changeBackgroundColor = () => {
+        let randomA = Math.floor(Math.random() * 256);
+        let randomB = Math.floor(Math.random() * 256);
+        let randomC = Math.floor(Math.random() * 256);
+        let color = `rgb(${randomA},${randomB},${randomC})`;
+        document.body.style.backgroundColor = color;
     }
-    document.getElementById("run").addEventListener("click", bgchange);
+    document.getElementById("run").addEventListener("click", changeBackgroundColor);
 })();

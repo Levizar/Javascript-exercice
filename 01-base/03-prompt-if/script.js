@@ -11,15 +11,15 @@
 
 (() => {
     // your code here
-    const gateau = () => {
-        let question = prompt("Voulez-vous du gateau ?");
-        if (question.toUpperCase() == "OUI"){
+    const askingForCake = () => {
+        let answerToCakePrompt = prompt("Voulez-vous du gateau ?");
+        if (answerToCakePrompt.toUpperCase() == "OUI"){
             alert("C'est bien !");
         }
         else{
             alert("Du gateau, ça ne se refuse pas!");
-            gateau();
+            askingForCake();
         }
     }
-    gateau();
+    askingForCake();
 })();

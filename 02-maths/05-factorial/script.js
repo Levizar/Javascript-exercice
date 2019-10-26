@@ -14,7 +14,7 @@
 
     document.getElementById("run").addEventListener("click", () => {
         // your code here
-        const factorize = (num) => (num == 0 || num == 1) ? 1 : (num<0) ? "Error: can't factorize negative number" : num = num * factorize(num-1);
+        const factorize = (number) => (number == 0 || number == 1) ? 1 : (number<0) ? "Error: can't factorize negative number" : number = number * factorize(number-1);
         let number = document.getElementById("number").value;
         alert(factorize(number));
     });

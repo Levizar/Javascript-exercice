@@ -13,17 +13,17 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
     
-    const bonjour_bonsoir = () => {
-        let time = new Date().getHours();
-        let it_be = "";
-        if(time<18 && time>3){
-            it_be = "Bonjour";
+    const greetings = () => {
+        let actualHours = new Date().getHours();
+        let greetingMessage = "";
+        if(actualHours<18 && actualHours>3){
+            greetingMessage = "Bonjour";
         }
         else{
-            it_be = "Bonsoir";
+            greetingMessage = "Bonsoir";
         }
 
-        document.getElementById("accueil").innerHTML = it_be;        
+        document.getElementById("accueil").innerHTML = greetingMessage;        
     }
-    bonjour_bonsoir();
+    greetings();
 })();

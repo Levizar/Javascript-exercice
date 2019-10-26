@@ -10,20 +10,20 @@
 // You will have time to focus on it later.
 
 (()=> {
-    let fizzbuzz = "";
+    let messageToDisplay = "";
     for(i=1;i<=100;i++){
         if(i%3==0 && i%5==0){
-            fizzbuzz = "fizzbuzz";
+            messageToDisplay = "fizzbuzz";
         }
         else if(i%3==0){
-            fizzbuzz = "fizz";
+            messageToDisplay = "fizz";
         }
         else if(i%5==0){
-            fizzbuzz = "buzz";
+            messageToDisplay = "buzz";
         }
         else{
-            fizzbuzz = i;
+            messageToDisplay = i;
         }
-        console.log(fizzbuzz);
+        console.log(messageToDisplay);
     }
 })();

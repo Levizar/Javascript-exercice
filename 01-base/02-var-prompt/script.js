@@ -11,6 +11,6 @@
 
 (() => {
     // your code here
-    let a = prompt("Quel est votre âge?");
-    alert("Votre âge est de " + a + "ans");
+    let age = prompt("Quel est votre âge?");
+    alert(`Votre âge est de ${age} ans`);
 })();

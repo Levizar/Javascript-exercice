@@ -12,21 +12,21 @@
 (() => {
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
-    const ajd = () => {
-        let date = new Date;
-        let w_day = date.getDay() -1;
+    const giveExactDate = () => {
+        let actualDate = new Date;
+        let weekDays = actualDate.getDay() -1;
         week = ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"];
-        w_day = week[w_day];
-        let day = date.getDate();
-        let month = date.getMonth()-1;
-        ymonth = ["janvier","février","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","décembre"];
-        month = ymonth[month];
-        let year = date.getFullYear();
-        let hours = date.getHours();
-        let minutes = date.getMinutes();
-        minutes < 10 ? minutes = "0" + minutes : 0;
-        p = `${w_day} ${day} ${month} ${year}, ${hours}h${minutes}`;
+        weekDays = week[weekDays];
+        let actualDay = actualDate.getDate();
+        let ActualMonth = actualDate.getMonth()-1;
+        yearMonths = ["janvier","février","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","décembre"];
+        ActualMonth = yearMonths[ActualMonth];
+        let actualYear = actualDate.getFullYear();
+        let actualHours = actualDate.getHours();
+        let actualMinutes = actualDate.getMinutes();
+        actualMinutes < 10 ? actualMinutes = "0" + actualMinutes : 0;
+        p = `${weekDays} ${actualDay} ${ActualMonth} ${actualYear}, ${actualHours}h${actualMinutes}`;
         document.getElementById("date").innerHTML = p;
     }
-    ajd();
+    giveExactDate();
 })();

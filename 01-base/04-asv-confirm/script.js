@@ -10,20 +10,20 @@
 // You will have time to focus on it later.
 
 (() => {    
-    const ask_sex = () => {
+    const askUserSex = () => {
         let sex = "";
         sex = prompt("Quel est votre sexe ? (Homme/Femme/Autre)");
         sex = sex.toUpperCase();
         if( sex != "HOMME" && sex != "FEMME" && sex !="AUTRE"){
             alert("Veuillez indiquer Homme ou Femme ou Autre")
-            ask_sex();
+            askUserSex();
         }
         return sex;
     }
     
     const asking = () => {
         let age = prompt("Quel âge avez-vous ?");
-        let sex = ask_sex();
+        let sex = askUserSex();
         let city = prompt("De quelle ville venez-vous ?");
         let confirmation = confirm("Confirmez vous les données suivantes?\n" + age + " ans\n" + sex + "\n" + city)
         if (confirmation == TRUE){
@@ -31,8 +31,8 @@
         }
         else{
             alert("Veuiller fournir vos données exactes");
-            asking();
+            askUserSex();
         }
     }
-    asking();
+    askUserSex();
 })();

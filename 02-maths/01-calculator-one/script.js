@@ -14,29 +14,29 @@
 
     document.getElementById("addition").addEventListener("click", () => {
         // perform an addition
-        let a = parseInt(document.getElementById("op-one").value);
-        let b = parseInt(document.getElementById("op-two").value);
-        alert( a + b );        
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+        alert( opOne + opTwo );        
     });
 
     document.getElementById("substraction").addEventListener("click", () => {
         // perform an substraction
-        let a = parseInt(document.getElementById("op-one").value);
-        let b = parseInt(document.getElementById("op-two").value);
-        alert( a - b );
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+        alert( opOne - opTwo );
     });
 
     document.getElementById("multiplication").addEventListener("click", () => {
         // perform an multiplication
-        let a = parseInt(document.getElementById("op-one").value);
-        let b = parseInt(document.getElementById("op-two").value);
-        alert( a * b );
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+        alert( opOne * opTwo );
     });
 
     document.getElementById("division").addEventListener("click", () => {
         // perform an division
-        let a = parseInt(document.getElementById("op-one").value);
-        let b = parseInt(document.getElementById("op-two").value);
-        alert( a / b );
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
+        alert( opOne / opTwo );
     });
 })();

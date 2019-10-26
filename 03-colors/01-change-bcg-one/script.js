@@ -11,11 +11,11 @@
 
 (() => {
     // your code here
-    function bgchange(color){
+    function changeBackgroundColor(color){
         document.body.style.backgroundColor = color;
     }
     
     Array.from(document.querySelectorAll("button")).forEach($btn =>
-        $btn.addEventListener("click",() => (bgchange($btn.id), false),)
+        $btn.addEventListener("click",() => (changeBackgroundColor($btn.id), false),)
     );
 })();

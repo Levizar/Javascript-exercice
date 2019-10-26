@@ -11,11 +11,11 @@
 
 (() => {
     // your code here
-    const bgchange = () => {
+    const changeBackgroundColor = () => {
         let color = document.getElementById("color").value;
         document.body.style.backgroundColor = color;
     }
     
-    document.getElementById("run").addEventListener("click", bgchange);
+    document.getElementById("run").addEventListener("click", changeBackgroundColor);
 
 })();

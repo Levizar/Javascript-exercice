@@ -22,6 +22,13 @@
         "raisin",
         "cerise",
     ]);
+    const del_add = 
+    fruits.delete("pomme");
+    fruits.delete("cerise");
+    fruits.add("bannane");
+    fruits.add("kiwi");
+
+    console.log(fruits)
 
     // your code here
 })();

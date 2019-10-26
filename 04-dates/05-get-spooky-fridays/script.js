@@ -10,25 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    const vendredi_13 = () => {
-        let year = document.getElementById("year").value;
+    const spookyFridayFinder = () => {
+        let targetYear = document.getElementById("year").value;
         let date;
-        let arr_month = [
+        let arrMonth = [
             'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 
             'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
         ];
-        let message_to_display;
+        let messageToDisplay;
         for(let i=0;i<=11;i++){
-            date = new Date(year,i,13);
+            date = new Date(targetYear,i,13);
             if((date.getDay())==5){
-                if(message_to_display == undefined){
-                    message_to_display = `Vendredi 13 ${arr_month[i]} ${year}`    
+                if(messageToDisplay == undefined){
+                    messageToDisplay = `Vendredi 13 ${arrMonth[i]} ${targetYear}`    
                 }
-                else{message_to_display = `${message_to_display}\nVendredi 13 ${arr_month[i]} ${year}`
+                else{messageToDisplay = `${messageToDisplay}\nVendredi 13 ${arrMonth[i]} ${targetYear}`
                 }
             }
         }
-        alert(message_to_display);
+        alert(messageToDisplay);
     }
-    document.getElementById("run").addEventListener("click", vendredi_13);
+    document.getElementById("run").addEventListener("click", spookyFridayFinder);
 })();

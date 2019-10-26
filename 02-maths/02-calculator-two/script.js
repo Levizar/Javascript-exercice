@@ -14,21 +14,21 @@
 
     const performOperation = operation => {
         // perform the operation
-        let a = parseInt(document.getElementById("op-one").value);
-        let b = parseInt(document.getElementById("op-two").value);
+        let opOne = parseInt(document.getElementById("op-one").value);
+        let opTwo = parseInt(document.getElementById("op-two").value);
         
         switch(operation){
             case "addition":
-                alert( a + b );
+                alert( opOne + opTwo );
                 break;
             case "substraction":
-                alert( a - b );
+                alert( opOne - opTwo );
                 break;
             case "multiplication":
-                alert( a * b );
+                alert( opOne * opTwo );
                 break;
             case "division":
-                alert( a / b );
+                alert( opOne / opTwo );
                 break;
         }
     };

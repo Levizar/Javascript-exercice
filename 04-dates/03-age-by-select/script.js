@@ -11,16 +11,16 @@
 
 (() => {
     const age = () => {
-        let td_date = new Date();
-        let td_year = td_date.getFullYear();
-        let td_month = td_date.getMonth();
-        let td_day = td_date.getDay();
-        let bd_year = document.getElementById("dob-year").value;
-        let bd_month = document.getElementById("dob-month").value - 1;
-        let bd_day = document.getElementById("dob-day").value;
+        let actualDate = new Date();
+        let actualYear = actualDate.getFullYear();
+        let actualMonth = actualDate.getMonth();
+        let actualDay = actualDate.getDay();
+        let birthdayYear = document.getElementById("dob-year").value;
+        let birthdayMonth = document.getElementById("dob-month").value - 1;
+        let birthdayDay = document.getElementById("dob-day").value;
 
-        let age = td_year - bd_year;
-        if( (td_month < bd_month) || ((td_month == bd_month) && (td_day < bd_day)) ){
+        let age = actualYear - birthdayYear;
+        if( (actualMonth < birthdayMonth) || ((actualMonth == birthdayMonth) && (actualDay < birthdayDay)) ){
             age = age - 1;
         }
     alert(`Vous avez ${age} ans`)        
