@@ -11,9 +11,21 @@
 
 (() => {
     class Animal {
-        sayHello() {
+        constructor(name){
+            this.name = name;
+        }
+
+        static get sayHello() {
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
-    // your code here
+
+    class Cat extends Animal {
+        
+    }
+
+    class Dog extends Animal{
+
+    }
+    
 })();
