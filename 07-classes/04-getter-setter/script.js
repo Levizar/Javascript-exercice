@@ -11,4 +11,19 @@
 
 (() => {
     // your code here
+
+    class Personn {
+        constructor(firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.getterName = () => `[${this.firstname}] [${this.lastname}]`;
+            this.setterName = (string) => {
+                string = string.split(' ')
+                this.firstname = a;
+                this.lastname = b;
+            }
+            }
+        }
+    
+
 })();
