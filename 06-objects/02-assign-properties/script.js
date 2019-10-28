@@ -26,5 +26,14 @@
         os: "linux",
         user: null,
     };
-    // your code here
+
+    const defaulter = () => {
+        Object.entries(defaultProps).forEach(([key, value]) => computers.forEach(obj => obj.hasOwnProperty(key) ? 0 : (obj[key]=value)));
+        console.log(computers);
+    }
+    
+
+
+    document.getElementById("run").addEventListener("click", defaulter)
+
 })();
