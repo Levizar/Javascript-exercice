@@ -13,19 +13,27 @@
     class Animal {
         constructor(name){
             this.name = name;
+            this.greeting = "Greeting from an undefined animal"
+        }
+        sayHello(){
+            return `${this.greeting}! I'm ${this.name}!`;
         }
 
-        static get sayHello() {
-            return `${this.constructor.greeting}! I'm ${this.name}!`;
-        }
     }
 
     class Cat extends Animal {
-        
+        static greeting = "Meouw !";
     }
 
     class Dog extends Animal{
-
+        static greeting = "wouf !"
     }
     
+    const test = () => {
+        const Terence = new Cat("Terence");
+        console.log(Terence.sayHello());
+    }
+
+    document.getElementById("run").addEventListener("click", test)
+
 })();
