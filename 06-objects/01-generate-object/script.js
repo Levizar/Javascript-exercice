@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    const obj = () => {
+        let brice = {
+            lastname: "Bar",
+            firstname: "Brice",
+            age: "42 ans",
+            city: "Sambreville",
+            country: "Belgium"
+        }
+        console.log(brice);
+    }
+
+
+    document.getElementById("run").addEventListener("click", obj)
+
 })();
