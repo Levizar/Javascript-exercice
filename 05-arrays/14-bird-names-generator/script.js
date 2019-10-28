@@ -38,5 +38,17 @@
         "arboré",
     ]);
 
+    const birdRandomizer = () => {
+        let randomBird = Math.floor(Math.random() * birds.length);
+        let randomAdjectiv = Math.floor(Math.random() * adjectives.size);
+        let arrAdjectives = [...adjectives];
+        let isFemale = birds[randomBird].hasOwnProperty("fem") ? "e" : "";
+        let p = `${birds[randomBird].name} ${arrAdjectives[randomAdjectiv]}${isFemale}`;
+        console.log(p);
+
+        document.getElementById("target").innerHTML = p
+    }
+
+    document.getElementById("run").addEventListener("click",birdRandomizer);
     // your code here
 })();
