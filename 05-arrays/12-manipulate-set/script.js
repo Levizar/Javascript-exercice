@@ -22,13 +22,15 @@
         "raisin",
         "cerise",
     ]);
-    const del_add = 
-    fruits.delete("pomme");
-    fruits.delete("cerise");
-    fruits.add("bannane");
-    fruits.add("kiwi");
+    const DeleteAndAddFruitsToArray = () => {
+        fruits.delete("pomme");
+        fruits.delete("cerise");
+        fruits.add("bannane");
+        fruits.add("kiwi");
+        console.log(fruits);
+    }
 
-    console.log(fruits)
+    document.getElementById("run").addEventListener("click",DeleteAndAddFruitsToArray);
 
     // your code here
 })();

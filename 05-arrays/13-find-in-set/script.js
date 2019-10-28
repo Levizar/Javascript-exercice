@@ -22,5 +22,14 @@
         "Lucas",
     ]);
 
+    const nbrAndAlexandre = () => {
+        let peoplesize = people.size;
+        console.log(peoplesize);
+        let isAlexInTheSet = people.has("Alexandre");
+        console.log(isAlexInTheSet)
+    }
+
+
+    document.getElementById("run").addEventListener("click",nbrAndAlexandre);
     // your code here
 })();
