@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+
+    let htmlCollection = document.getElementsByClassName("target");
+    let arrClassTarget = [...htmlCollection];
+    arrClassTarget.forEach(elm => elm.innerHTML = "Owned");
+    console.log(arrClassTarget);    
+
 })();

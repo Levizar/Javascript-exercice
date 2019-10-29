@@ -15,7 +15,7 @@
             this.name = name;
             this.greeting = "Greeting from an undefined animal"
         }
-        static sayHello(){
+        sayHello(){
             return `${this.greeting}! I'm ${this.name}!`;
         }
     }

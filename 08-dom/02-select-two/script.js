@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    // let arrp = document.querySelector("p.target").innerHTML = "owned"
+
+    let htmlCollection = document.getElementsByClassName("target");
+    let arrClassTarget = [...htmlCollection];
+    arrClassTarget.forEach(elm => elm.innerHTML = "Owned");
+    console.log(arrClassTarget);
+
+    // OR USE QUERYSELECTOR !!! (Easier !)
+
 })();
