@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    let slider = document.getElementById("slider")
+    const numberChanger = () => {
+
+    }
+    document.getElementById("slider").addEventListener("",numberChanger)
 })();
