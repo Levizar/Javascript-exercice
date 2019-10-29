@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    document.getElementById("pass-one").setAttribute("maxlength", 10);
+    const passwordCheck = () => {
+        const password = document.getElementById("pass-one").value;
+        const passwordLength = password.length;
+        const stringPasswordLength = `${passwordLength}/10`
+        document.getElementById("counter").innerHTML = stringPasswordLength;
+    }
+
+    document.getElementById("pass-one").addEventListener("keyup", passwordCheck)
+
 })();
