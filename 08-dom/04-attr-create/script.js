@@ -10,5 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let source = document.getElementById("source").dataset.image; //récupère la value de "data-image"
+    document.getElementById("target").appendChild( document.createElement('img') );  // crée l'élément img et le place
+    document.getElementById("target").querySelector("img").src = source; // donne la valeur à l'attribut source
+    
 })();
