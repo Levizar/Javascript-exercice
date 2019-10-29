@@ -17,12 +17,12 @@
         console.log(bigString);
         bigStringLength = bigString.length;
         let waveCount = 0;
-        let arrClassWaveSize = [ "small", "medium", "large", "x-large", "xx-large"]
+        let arrClassWaveSize = [ "small", "medium", "large", "x-large", "xx-large", "x-large", "large", "medium"]
         for(let i = 0; i < bigStringLength; i++){
             if(bigString[i] != " "){
-                waveCount += 1;
-                waveCount > 4 ? waveCount = 0 : 0;
                 bigString[i] = `<span class="wave${waveCount}" style="font-size: ${arrClassWaveSize[waveCount]}">${bigString[i]}</span>`;
+                waveCount += 1;
+                waveCount > 7 ? waveCount = 0 : 0;
             }
         }
         bigString = bigString.join('');
