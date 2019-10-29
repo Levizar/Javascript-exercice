@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+    
+    let target = document.getElementById("target");
+    let table = document.createElement("table");
+    target.appendChild(table);
+    table = document.querySelector("table");
+    
+    
+    
+    for(i=1;i<=10;i++){
+        let tr = document.createElement("tr");
+        table.appendChild(tr)
+        let td = document.createElement("td");
+        target.querySelector(`tr:nth-child(${i})`).appendChild(td);
+    }
+    
+
 })();

@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    
+    let target = document.getElementById("target");
+    let table = document.createElement("table");
+    target.appendChild(table);
+    table = document.querySelector("table");
+    
+    
+    
+    for(i=1;i<=11;i++){
+        let tr = document.createElement("tr");
+        table.appendChild(tr)
+        for(j=1;j<=10;j++){
+            let td = document.createElement("td");
+            target.querySelector(`tr:nth-child(${i})`).appendChild(td);
+            if(i==1){
+                target.querySelector(`tr:nth-child(${i}) td:nth-child(${j})`).innerHTML = `Table de ${j}`;
+            } else {
+                target.querySelector(`tr:nth-child(${i}) td:nth-child(${j})`).innerHTML = (i-1)*j;
+            }
+        }
+    }
+    
+
 })();

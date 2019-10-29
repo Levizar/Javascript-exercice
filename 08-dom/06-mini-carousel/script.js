@@ -18,5 +18,14 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    let i = 0;
+    let slider = document.querySelector(".material > figure:nth-child(1) > img:nth-child(1)");
+    const nextSlide = () => {
+        i += 1;
+        i == gallery.length ? i = 0 : 0;
+        slider.src = gallery[i];
+    }
+
+    document.getElementById("next").addEventListener("click", nextSlide)
+
 })();
