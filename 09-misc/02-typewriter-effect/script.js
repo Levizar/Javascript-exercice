@@ -24,7 +24,7 @@
         bigString = bigString.join('');
         document.getElementById("target").innerHTML = bigString;
         let textcounter = 1;
-        interval1 = setInterval(() => {
+        let interval1 = setInterval(() => {
             document.querySelector(`p span:nth-child(${textcounter})`).style.visibility = "visible";
             textcounter += 1;
             if(textcounter == bigStringLength){

@@ -11,9 +11,12 @@
 
 (() => {
     
-    let slider = document.getElementById("slider")
+    let slider = document.getElementById("slider");
+    let target = document.getElementById("target");
     const numberChanger = () => {
-
+        let value = slider.value;
+        target.innerHTML = `+${value}`;
+        slider.addEventListener("mouseup", clearInterval(interval1));
     }
-    document.getElementById("slider").addEventListener("",numberChanger)
+    slider.addEventListener("mousedown",() => (interval1=setInterval(numberChanger, 100)));
 })();

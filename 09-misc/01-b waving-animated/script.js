@@ -29,7 +29,7 @@
         arrClassWaveSize = [...arrClassWaveSize, ...arrClassWaveSize.reverse()];
         WaveSizeNumber = arrClassWaveSize.length - 1;
         console.log(arrClassWaveSize);
-        interval1 = setInterval(() => {
+        let interval1 = setInterval(() => {
             document.querySelector(`p span:nth-child(${textcounter})`).style.fontSize = `${arrClassWaveSize[waveCounter]}`;
             textcounter += 1;
             waveCounter += 1;
