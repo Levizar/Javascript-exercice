@@ -12,18 +12,54 @@
 (() => {
     // your code here
 
-    class Personn {
+    class Person {
         constructor(firstname, lastname) {
             this.firstname = firstname;
             this.lastname = lastname;
             this.getterName = () => `[${this.firstname}] [${this.lastname}]`;
             this.setterName = (string) => {
-                string = string.split(' ')
-                this.firstname = a;
-                this.lastname = b;
-            }
+                string = string.split(' ');
+                this.firstname = string[0];
+                this.lastname = string[1];
             }
         }
-    
+    }
+
+    const newInstancePerson = () => {
+        let p1 = new Person("Terence", "Hecq");
+        console.log(p1.getterName());
+        p1.setterName("Brice Bartoletti");
+        console.log(p1.getterName())
+    }
+
+    document.getElementById("run").addEventListener("click", newInstancePerson);
+
+
+
+    // AUTRE METHODE AVEC GET ET SET, LA METHODE HORS CONSTRUCTEUR !
+
+
+    // class Person {
+    //     constructor(firstname, lastname) {
+    //         this.firstname = firstname;
+    //         this.lastname = lastname;
+    //     }
+    //     get getterName () {
+    //         return `[${this.firstname}] [${this.lastname}]`
+    //     };
+        
+    //     set setterName (string) {
+    //         string = string.split(' ');
+    //         this.firstname = string[0];
+    //         this.lastname = string[1];
+    //     }
+    // }
+
+    // const newInstancePerson = () => {
+    //     let p1 = new Person("Terence", "Hecq");
+    //     console.log(p1.getterName);
+    //     p1.setterName = "Brice Bartoletti";
+    //     console.log(p1.getterName)
+    // }
 
 })();
