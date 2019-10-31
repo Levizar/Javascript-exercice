@@ -3,17 +3,13 @@
  *
  * /09-misc/05-worst-ui-three/script.js - 9.5: la pire interface (3) : phone slot
  *
- * coded by leny@BeCode
- * started at 26/10/2018
+ * coded by Brice and Terence at BeCode Charleroi
+ * started at 31/10/2019
  */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
 
 (() => {
-    // your code here
-
-    
+     
     // Fonction qui, appelée par setInterval() fait tourner les slots
     function test(id){
         let value = parseInt(document.getElementById(id).value);
@@ -49,7 +45,7 @@
             if(arrRunning[id] === true){ // On stoppe l'appel de la fonction (donc le slot)
                 clearInterval(arrInterval[id]);
                 arrRunning[id] = false; // On passe la valeur correspondant à l'id à false (le slot est stoppé)
-                document.getElementById(e.target.id).innerHTML = "Relance batard !"
+                document.getElementById(e.target.id).innerHTML = "Restart"
             }else{
                 arrInterval[id] = setInterval(test, 100, id); // Si le slot était stoppé, on le relance
                 arrRunning[id] = true; //On passe la valeur correspondant à l'id à true (On dit que le slot tourne)

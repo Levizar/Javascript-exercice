@@ -35,7 +35,9 @@
     
     const test = () => {
         const Terence = new Cat("Terence");
+        const bob = new Dog("bob")
         console.log(Terence.sayHello());
+        console.log(bob.sayHello())
     }
 
     
