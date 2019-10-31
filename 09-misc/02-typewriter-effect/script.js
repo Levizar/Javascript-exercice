@@ -12,28 +12,27 @@
 (() => {
     
     
+    let alreadyDone = false;
     const typeWriter = () => {
-        let bigString = document.getElementById("target").innerHTML;
-        bigString = [...bigString];
-        console.log(bigString);
-        bigStringLength = bigString.length;
-        let waveCount = 0;
-        for(let i = 0; i < bigStringLength; i++){
-                bigString[i] = `<span style="visibility: hidden">${bigString[i]}</span>`;
+        if(! alreadyDone){
+            let bigString = document.getElementById("target").innerHTML;
+            arrBigString = [...bigString];
+            let arrBigStringLength = arrBigString.length;
+            for(let i = 0; i < arrBigStringLength; i++){
+                arrBigString[i] = `<span style="visibility: hidden">${arrBigString[i]}</span>`;
+            }
+            arrBigString = arrBigString.join('');
+            document.getElementById("target").innerHTML = arrBigString;
+            alreadyDone = true;
         }
-        bigString = bigString.join('');
-        document.getElementById("target").innerHTML = bigString;
         let textcounter = 1;
         let interval1 = setInterval(() => {
             document.querySelector(`p span:nth-child(${textcounter})`).style.visibility = "visible";
             textcounter += 1;
-            if(textcounter == bigStringLength){
+            if(textcounter == arrBigStringLength){
                 clearInterval(interval1);
             }
         }, 100);
-        // for(let i = 1; i < (bigStringLength-1); i++){
-        // }
-        
     }
     
     document.getElementById("run").addEventListener("click", typeWriter);

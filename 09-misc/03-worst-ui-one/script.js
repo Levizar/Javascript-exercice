@@ -13,10 +13,12 @@
     
     let slider = document.getElementById("slider");
     let target = document.getElementById("target");
-    const numberChanger = () => {
+    const valueChanger = () => {
         let value = slider.value;
         target.innerHTML = `+${value}`;
-        slider.addEventListener("mouseup", clearInterval(interval1));
-    }
-    slider.addEventListener("mousedown",() => (interval1=setInterval(numberChanger, 100)));
+    };
+    slider.oninput = valueChanger; 
+
+    // le oninput sert de lanceur de fonction.
+
 })();
