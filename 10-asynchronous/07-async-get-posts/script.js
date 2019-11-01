@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", async () => {
+        const articles = await window.lib.getPosts();
+        console.log(articles);
+     })
+
 })();

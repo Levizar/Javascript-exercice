@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", () => {
+        window.lib.getPosts().then( arrArticles => {
+            arrArticles.forEach( objetArticle => {
+                window.lib.getComments(objetArticle.id).then( arrComments => {
+                        objetArticle.Comments = arrComments;
+                        console.log(objetArticle.Comments);
+                })
+            })
+        })
+     })
+
 })();

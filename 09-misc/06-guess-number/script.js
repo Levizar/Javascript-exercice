@@ -30,4 +30,24 @@
     }
     theGoodPrice();
 
+/* 
+    let randomNumber = Math.floor(Math.random()*101);
+    let numberOfTry = 0
+    let isGameRunning = true
+    while (isGameRunning){
+        let choice = prompt("Devinez le nombre");
+        if (randomNumber > choice) {
+            numberOfTry += 1;
+            alert("C'est plus !");
+        }else if(randomNumber < choice){
+            numberOfTry += 1;
+            alert("C'est moins !");
+        }else{
+            numberOfTry += 1;
+            alert(`Bravo, vous avez réussi en ${numberOfTry} essai(s)`);
+            isGameRunning = false;
+        }
+    }
+ */
+
 })();
