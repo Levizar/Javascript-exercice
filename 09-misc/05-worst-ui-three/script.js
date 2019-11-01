@@ -11,7 +11,7 @@
 (() => {
      
     // Fonction qui, appelée par setInterval() fait tourner les slots
-    function test(id){
+    function valueIncrementer(id){
         let value = parseInt(document.getElementById(id).value);
         let max = parseInt(document.getElementById(id).dataset.max);
         let min = parseInt(document.getElementById(id).dataset.min);
@@ -34,10 +34,10 @@
     
     
     // C'est le départ de keskifofère
-    document.querySelectorAll("input").forEach((input)=>{ // Pour chaque input, on lance le setInterval(test)
+    document.querySelectorAll("input").forEach((input)=>{ // Pour chaque input, on lance le setInterval(valueIncrementer)
         let id = input.id; 
 
-        arrInterval[id] = setInterval(test, 100, id); //  on stocke les setInterval dans un tableau associatif où l'id correspond à la fonction
+        arrInterval[id] = setInterval(valueIncrementer, 100, id); //  on stocke les setInterval dans un tableau associatif où l'id correspond à la fonction
         arrRunning[id] = true; // Toutes les valeurs du tableau sont true par défaut;
 
         document.querySelector(`#fix-${id}`).addEventListener("click",(e)=>{ // On écoute le click sur un bouton 
@@ -47,7 +47,7 @@
                 arrRunning[id] = false; // On passe la valeur correspondant à l'id à false (le slot est stoppé)
                 document.getElementById(e.target.id).innerHTML = "Restart"
             }else{
-                arrInterval[id] = setInterval(test, 100, id); // Si le slot était stoppé, on le relance
+                arrInterval[id] = setInterval(valueIncrementer, 100, id); // Si le slot était stoppé, on le relance
                 arrRunning[id] = true; //On passe la valeur correspondant à l'id à true (On dit que le slot tourne)
                 document.getElementById(e.target.id).innerHTML = "Stop"
             }

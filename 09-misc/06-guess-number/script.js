@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    let randomNumber = Math.floor(Math.random()*101);
+    let numberOfTry = 0
+    const theGoodPrice = () => {
+        let choice = prompt("Devinez le nombre");
+        if (randomNumber > choice) {
+            numberOfTry += 1;
+            alert("C'est plus !");
+            theGoodPrice();
+        }else if(randomNumber < choice){
+            numberOfTry += 1;
+            alert("C'est moins !");
+            theGoodPrice();
+        }else{
+            numberOfTry += 1;
+            alert(`Bravo, vous avez réussi en ${numberOfTry} essai(s)`);
+        }
+    }
+    theGoodPrice();
+
 })();
