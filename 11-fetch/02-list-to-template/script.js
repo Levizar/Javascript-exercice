@@ -17,15 +17,15 @@
             const arrObjetXmen = await request.json();
             const target = document.getElementById("target");
             let i = 0;
-            arrObjetXmen.forEach( ObjetXmen => {
+            arrObjetXmen.forEach( objetXmen => {
                 i++
                 let template = document.getElementById("tpl-hero").cloneNode(true);
                 let cloneTemplateContent = document.importNode(template.content, true);
                 target.appendChild(cloneTemplateContent);
                 
-                document.querySelector(`.hero:nth-child(0n+${i})>.title>strong.name`).innerHTML = ObjetXmen.name;
-                document.querySelector(`.hero:nth-child(0n+${i})>.title>em.alter-ego`).innerHTML = ObjetXmen.alterEgo;
-                document.querySelector(`.hero:nth-child(0n+${i})>p.powers`).innerHTML = ObjetXmen.abilities;
+                document.querySelector(`.hero:nth-child(0n+${i})>.title>strong.name`).innerHTML = objetXmen.name;
+                document.querySelector(`.hero:nth-child(0n+${i})>.title>em.alter-ego`).innerHTML = objetXmen.alterEgo;
+                document.querySelector(`.hero:nth-child(0n+${i})>p.powers`).innerHTML = objetXmen.abilities;
 
             });
 
