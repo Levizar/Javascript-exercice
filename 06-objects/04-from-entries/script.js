@@ -13,7 +13,7 @@
     
     // Déroule l'objet via une fonction reduce
     const createObj = () => {
-        const keys = ["name", "species", "age", "gender", "color"];
+        const keys   = ["name", "species", "age", "gender", "color"];
         const values = ["Skitty", "cat", 9, "female", "tabby"];
         const merged = keys.reduce((obj, key, index) => ({ ...obj, [key]: values[index] }), {})
         console.log(merged);
@@ -21,7 +21,7 @@
     
     // bonne méthode
     const createObjFromEntries = () => {
-        const keys = ["name", "species", "age", "gender", "color"];
+        const keys   = ["name", "species", "age", "gender", "color"];
         const values = ["Skitty", "cat", 9, "female", "tabby"];
         // crée l'objet via la map [keys, values]
         const objmerged = Object.fromEntries(keys.map((a,i) => [keys[i], values[i]]))

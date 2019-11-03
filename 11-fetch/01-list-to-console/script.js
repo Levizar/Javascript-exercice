@@ -13,7 +13,7 @@
     
     document.getElementById("run").addEventListener("click", async () => {
         try {
-            const request = await fetch("http://localhost:3000/heroes");
+            const request   = await fetch("http://localhost:3000/heroes");
             const objetXmen = await request.json();
             console.log(objetXmen);
         }catch (error){

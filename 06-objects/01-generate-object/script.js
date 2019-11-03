@@ -13,11 +13,11 @@
     
     const obj = () => {
         let brice = {
-            lastname: "Bar",
+            lastname : "Bar",
             firstname: "Brice",
-            age: "42 ans",
-            city: "Sambreville",
-            country: "Belgium"
+            age      : "42 ans",
+            city     : "Near Namur",
+            country  : "Belgium"
         }
         console.log(brice);
     }

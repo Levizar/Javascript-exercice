@@ -13,10 +13,10 @@
     
     document.getElementById("pass-one").setAttribute("maxlength", 10);
     const passwordCheck = () => {
-        const password = document.getElementById("pass-one").value;
+        const password       = document.getElementById("pass-one").value;
         const passwordLength = password.length;
-        const validity = document.getElementById("validity")
-        number = password.match(/\d/g);
+        const validity       = document.getElementById("validity")
+              number         = password.match(/\d/g);
         passwordLength >= 8 && number.length >= 2 ? validity.innerHTML= "OK" : validity.innerHTML = "Pas OK";
     }
 

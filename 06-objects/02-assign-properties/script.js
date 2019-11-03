@@ -23,8 +23,8 @@
     ];
     const defaultProps = {
         available: true,
-        os: "linux",
-        user: null,
+        os       : "linux",
+        user     : null,
     };
 
     const defaulter = () => {

@@ -11,13 +11,13 @@
 
 (() => {
     const age = () => {
-        let actualDate = new Date();
-        let actualYear = actualDate.getFullYear();
-        let actualMonth = actualDate.getMonth();
-        let actualDay = actualDate.getDay();
-        let birthdayYear = document.getElementById("dob-year").value;
+        let actualDate    = new Date();
+        let actualYear    = actualDate.getFullYear();
+        let actualMonth   = actualDate.getMonth();
+        let actualDay     = actualDate.getDay();
+        let birthdayYear  = document.getElementById("dob-year").value;
         let birthdayMonth = document.getElementById("dob-month").value - 1;
-        let birthdayDay = document.getElementById("dob-day").value;
+        let birthdayDay   = document.getElementById("dob-day").value;
 
         let age = actualYear - birthdayYear;
         if( (actualMonth < birthdayMonth) || ((actualMonth == birthdayMonth) && (actualDay < birthdayDay)) ){

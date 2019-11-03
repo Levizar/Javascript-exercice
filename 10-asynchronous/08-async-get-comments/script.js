@@ -14,8 +14,8 @@
     document.getElementById("run").addEventListener("click", async () => {
         const arrArticles = await window.lib.getPosts();
         arrArticles.forEach( async objetArticle => {
-            const arrComments = await window.lib.getComments(objetArticle.id)
-            objetArticle.Comments = arrComments;
+            const arrComments           = await window.lib.getComments(objetArticle.id)
+                  objetArticle.Comments = arrComments;
             console.log(objetArticle.Comments);
         })
     })

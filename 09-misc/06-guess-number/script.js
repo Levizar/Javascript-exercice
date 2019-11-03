@@ -1,6 +1,6 @@
 /* becode/javascript
  *
- * /09-misc/06-guess-number/script.js - 9.6: jeu : trouver un nombre
+ * /09-misc/06-guess-number/script.js - 9.6: jeu: trouver un nombre
  *
  * coded by leny@BeCode
  * started at 26/10/2018
@@ -11,8 +11,8 @@
 
 (() => {
     
-    let randomNumber = Math.floor(Math.random()*101);
-    let numberOfTry = 0
+    let   randomNumber = Math.floor(Math.random()*101);
+    let   numberOfTry  = 0
     const theGoodPrice = () => {
         let choice = prompt("Devinez le nombre");
         if (randomNumber > choice) {
@@ -31,8 +31,8 @@
     theGoodPrice();
 
 /* 
-    let randomNumber = Math.floor(Math.random()*101);
-    let numberOfTry = 0
+    let randomNumber  = Math.floor(Math.random()*101);
+    let numberOfTry   = 0
     let isGameRunning = true
     while (isGameRunning){
         let choice = prompt("Devinez le nombre");

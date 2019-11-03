@@ -13,8 +13,8 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
     // your code here
     const greetings = () => {
-        let date = new Date()
-        let actualHours = date.getHours();
+        let date          = new Date()
+        let actualHours   = date.getHours();
         let actualMinutes = date.getMinutes();
         let greetingMessage = "";
         if((actualHours>18) || (actualHours<18 && actualMinutes>30)){

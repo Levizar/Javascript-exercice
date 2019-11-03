@@ -13,19 +13,19 @@
     
     document.getElementById("run").addEventListener("click", async () => {
         try {
-            const request = await fetch("http://localhost:3000/heroes");
+            const request      = await fetch("http://localhost:3000/heroes");
             const arrObjetXmen = await request.json();
-            const target = document.getElementById("target");
-            let i = 0;
+            const target       = document.getElementById("target");
+            let   i            = 0;
             arrObjetXmen.forEach( objetXmen => {
                 i++
-                let template = document.getElementById("tpl-hero").cloneNode(true);
+                let template             = document.getElementById("tpl-hero").cloneNode(true);
                 let cloneTemplateContent = document.importNode(template.content, true);
                 target.appendChild(cloneTemplateContent);
                 
-                document.querySelector(`.hero:nth-child(0n+${i})>.title>strong.name`).innerHTML = objetXmen.name;
+                document.querySelector(`.hero:nth-child(0n+${i})>.title>strong.name`).innerHTML  = objetXmen.name;
                 document.querySelector(`.hero:nth-child(0n+${i})>.title>em.alter-ego`).innerHTML = objetXmen.alterEgo;
-                document.querySelector(`.hero:nth-child(0n+${i})>p.powers`).innerHTML = objetXmen.abilities;
+                document.querySelector(`.hero:nth-child(0n+${i})>p.powers`).innerHTML            = objetXmen.abilities;
 
             });
 

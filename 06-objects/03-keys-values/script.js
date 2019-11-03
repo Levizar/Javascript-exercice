@@ -11,16 +11,16 @@
 
 (() => {
     const person = {
-        lastname: "Delnatte",
+        lastname : "Delnatte",
         firstname: "Pierre-Antoine",
-        nickname: "Leny",
+        nickname : "Leny",
         birthDate: "08-05-1985",
-        city: "Liège",
-        status: "married",
+        city     : "Liège",
+        status   : "married",
     };
     
     const coucoulesKeys = () => {
-        let keys = Object.keys(person);
+        let keys   = Object.keys(person);
         let values = Object.values(person);
         console.log(keys);
         console.log(values);

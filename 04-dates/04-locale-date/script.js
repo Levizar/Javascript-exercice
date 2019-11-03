@@ -14,15 +14,15 @@
     // your code here
     const giveExactDate = () => {
         let actualDate = new Date;
-        let weekDays = actualDate.getDay() -1;
+        let weekDays   = actualDate.getDay() -1;
         week = ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"];
-        weekDays = week[weekDays];
-        let actualDay = actualDate.getDate();
+            weekDays    = week[weekDays];
+        let actualDay   = actualDate.getDate();
         let ActualMonth = actualDate.getMonth()-1;
         yearMonths = ["janvier","février","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","décembre"];
-        ActualMonth = yearMonths[ActualMonth];
-        let actualYear = actualDate.getFullYear();
-        let actualHours = actualDate.getHours();
+            ActualMonth   = yearMonths[ActualMonth];
+        let actualYear    = actualDate.getFullYear();
+        let actualHours   = actualDate.getHours();
         let actualMinutes = actualDate.getMinutes();
         actualMinutes < 10 ? actualMinutes = "0" + actualMinutes : 0;
         p = `${weekDays} ${actualDay} ${ActualMonth} ${actualYear}, ${actualHours}h${actualMinutes}`;

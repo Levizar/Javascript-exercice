@@ -15,7 +15,7 @@
     class Personn {
         constructor(firstname, lastname) {
             this.firstname = firstname;
-            this.lastname = lastname;
+            this.lastname  = lastname;
             this.greetings = () => `Hello, ${this.firstname} ${this.lastname}`;
             }
         }

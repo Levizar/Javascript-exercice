@@ -23,9 +23,9 @@
     ]);
 
     const nbrAndAlexandre = () => {
-        let peoplesize = people.size;
-        console.log(peoplesize);
+        let peoplesize     = people.size;
         let isAlexInTheSet = people.has("Alexandre");
+        console.log(peoplesize);
         console.log(isAlexInTheSet)
     }
 

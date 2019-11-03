@@ -12,9 +12,9 @@
 (() => {
     
     const passwordCheck = () => {
-        let passwordOne = document.getElementById("pass-one");
+        let passwordOne      = document.getElementById("pass-one");
         let passwordOneValue = document.getElementById("pass-one").value;
-        let passwordTwo = document.getElementById("pass-two");
+        let passwordTwo      = document.getElementById("pass-two");
         let passwordTwoValue = document.getElementById("pass-two").value;
     
         if(passwordOneValue === ""){

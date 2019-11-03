@@ -12,9 +12,9 @@
 (() => {
     
     let img = document.querySelector(".material > figure:nth-child(1) > img:nth-child(1)")
-    let imgHoverSrc = img.dataset.hover;
+    let imgHoverSrc   = img.dataset.hover;
     let imgInitialSrc = img.src;
-    const hover = () => img.src = imgHoverSrc;
+    const hover   = () => img.src = imgHoverSrc;
     const unHover = () => img.src = imgInitialSrc;
     img.addEventListener("mouseenter", hover);
     img.addEventListener("mouseleave", unHover);

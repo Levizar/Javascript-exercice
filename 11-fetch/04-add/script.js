@@ -12,10 +12,9 @@
 (() => {
     const createNewXman = async () => {
         
-        let name = document.getElementById("hero-name").value;
-        let alterEgo = document.getElementById("hero-alter-ego").value;
+        let name      = document.getElementById("hero-name").value;
+        let alterEgo  = document.getElementById("hero-alter-ego").value;
         let abilities = document.getElementById("hero-powers").value.split(", ");
-        let id 
         
         if(name == "" || alterEgo == "" || abilities == ""){
             alert("Remplissez tous les champs !")
@@ -23,13 +22,13 @@
         }else{
             try{
                 const requestArrOfXmen = await fetch("http://localhost:3000/heroes");
-                let arrOfXmen = await requestArrOfXmen.json();
-                id = arrOfXmen.length + 1;
+                let   arrOfXmen        = await requestArrOfXmen.json();
+                let   id               = arrOfXmen.length + 1;
                 return {
-                    id : id,
-                    name : name, 
-                    alterEgo : alterEgo,             
-                    abilities : abilities 
+                    id       : id,
+                    name     : name,
+                    alterEgo : alterEgo,
+                    abilities: abilities
                 }
             } catch(error) {
                 console.error(error);
@@ -40,7 +39,7 @@
     const sendDataToApi = async (data) => {
         try{
             let sendDataRequest = await fetch("http://localhost:3000/heroes",{
-                method: "POST",
+                method : "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },

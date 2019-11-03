@@ -22,7 +22,7 @@
             date = new Date(targetYear,i,13);
             if((date.getDay())==5){
                 if(messageToDisplay == undefined){
-                    messageToDisplay = `Vendredi 13 ${arrMonth[i]} ${targetYear}`    
+                    messageToDisplay = `Vendredi 13 ${arrMonth[i]} ${targetYear}`
                 }
                 else{messageToDisplay = `${messageToDisplay}\nVendredi 13 ${arrMonth[i]} ${targetYear}`
                 }

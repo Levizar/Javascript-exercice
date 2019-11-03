@@ -1,6 +1,6 @@
 /* becode/javascript
  *
- * /09-misc/03-worst-ui-one/script.js - 9.3: la pire interface (1) : phone slider
+ * /09-misc/03-worst-ui-one/script.js - 9.3: la pire interface (1): phone slider
  *
  * coded by leny@BeCode
  * started at 26/10/2018
@@ -11,13 +11,13 @@
 
 (() => {
     
-    let slider = document.getElementById("slider");
-    let target = document.getElementById("target");
+    let   slider       = document.getElementById("slider");
+    let   target       = document.getElementById("target");
     const valueChanger = () => {
-        let value = slider.value;
-        target.innerHTML = `+${value}`;
+        let value            = slider.value;
+            target.innerHTML = `+${value}`;
     };
-    slider.oninput = valueChanger; 
+    slider.oninput = valueChanger;
 
     // le oninput sert de lanceur de fonction.
 
