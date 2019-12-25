@@ -11,7 +11,7 @@
 
 (() => {
     
-    // Déroule l'objet via une fonction reduce
+    // Déroule l'objet via une fonction reduce => Très Tricky, à éviter
     const createObj = () => {
         const keys   = ["name", "species", "age", "gender", "color"];
         const values = ["Skitty", "cat", 9, "female", "tabby"];
@@ -23,7 +23,7 @@
     const createObjFromEntries = () => {
         const keys   = ["name", "species", "age", "gender", "color"];
         const values = ["Skitty", "cat", 9, "female", "tabby"];
-        // crée l'objet via la map [keys, values]
+        // crée l'objet avec la fonction fromEntries depuis l'array crée via la map [keys, values]
         const objmerged = Object.fromEntries(keys.map((a,i) => [keys[i], values[i]]))
         console.log(objmerged);
     }
